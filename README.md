@@ -26,8 +26,8 @@
       </p>
       <ul>
         <li> Mình hiện tại là sinh viên năm 3 khoa CNTT thuộc trường NCT trong NEU và là thành viên Gen13 CLB Sáo Trúc Bách Khoa </li>
-        <li> Mình thì chưa chắc sau này theo đuổi sự nghiệp trong lĩnh vực IT đâu, nhưng mình sẽ luôn cố hết sức trong quá trình học và làm việc hiện tại </li>
-        <li> Mình luôn lạc quan và yêu đời, vì mình sống chỉ vì bản thân và người thân của mình thôi, người khác thì mình k thèm quan tâm á =)) </li>
+        <li> Mình quê ở Vĩnh Phúc, gần hồ Đại Lải nếu bạn có biết nhaa </li>
+        <li> Cảm ơn vì đã đọc những dòng giới thiệu vô nghĩa trên </li>
       </ul>
       <p><i>Thân ái, DuTiHeo</i></p>
     </td>
