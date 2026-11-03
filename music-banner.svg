@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="100%" height="100%">
+  <defs>
+    <!-- Nền chuyển màu ban đêm -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#101f2e" />
+      <stop offset="100%" stop-color="#0a2629" />
+    </linearGradient>
+
+    <!-- Màu thân sáo trúc -->
+    <linearGradient id="bambooGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f3d078" />
+      <stop offset="45%" stop-color="#d4a24c" />
+      <stop offset="100%" stop-color="#8f6219" />
+    </linearGradient>
+
+    <!-- Màu chữ phát sáng -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7ee8fa" />
+      <stop offset="50%" stop-color="#eec0c6" />
+      <stop offset="100%" stop-color="#ffd166" />
+    </linearGradient>
+
+    <!-- Màu dây đàn ánh sáng -->
+    <linearGradient id="stringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5d4" stop-opacity="0" />
+      <stop offset="25%" stop-color="#00f5d4" stop-opacity="0.7" />
+      <stop offset="50%" stop-color="#ffd166" stop-opacity="0.9" />
+      <stop offset="75%" stop-color="#ff5d8f" stop-opacity="0.7" />
+      <stop offset="100%" stop-color="#ff5d8f" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Hiệu ứng phát sáng (Glow) -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="35" />
+    </filter>
+  </defs>
+
+  <style>
+    .title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 44px;
+      font-weight: 800;
+      letter-spacing: 5px;
+      fill: url(#textGrad);
+      filter: url(#glow);
+      animation: floatTitle 4s ease-in-out infinite;
+    }
+    .subtitle {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 16px;
+      fill: #a8dadc;
+      letter-spacing: 2px;
+      opacity: 0.9;
+    }
+    .note {
+      font-family: 'Segoe UI Symbol', 'Apple Symbols', sans-serif;
+      fill: #ffd166;
+      filter: url(#glow);
+      opacity: 0;
+    }
+    .note-cyan { fill: #00f5d4; }
+    .note-pink { fill: #ff5d8f; }
+
+    .n1 { animation: rise1 5s ease-in-out infinite 0s; font-size: 28px; }
+    .n2 { animation: rise2 6s ease-in-out infinite 1.2s; font-size: 22px; }
+    .n3 { animation: rise1 4.5s ease-in-out infinite 2.4s; font-size: 32px; }
+    .n4 { animation: rise2 5.5s ease-in-out infinite 0.7s; font-size: 24px; }
+    .n5 { animation: rise1 6.2s ease-in-out infinite 3.1s; font-size: 26px; }
+    .n6 { animation: rise2 4.8s ease-in-out infinite 1.8s; font-size: 30px; }
+
+    .flute-group {
+      animation: hoverFlute 5s ease-in-out infinite;
+      transform-origin: 450px 300px;
+    }
+    .tassel {
+      animation: swayTassel 3s ease-in-out infinite;
+      transform-origin: 235px 308px;
+    }
+    .star {
+      fill: #ffffff;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+    .eq-bar {
+      fill: #00f5d4;
+      opacity: 0.45;
+      transform-box: fill-box;
+      transform-origin: bottom;
+      animation: pulseBar 1.2s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatTitle {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes hoverFlute {
+      0%, 100% { transform: translateY(0px) rotate(-2deg); }
+      50% { transform: translateY(-8px) rotate(-0.5deg); }
+    }
+    @keyframes swayTassel {
+      0%, 100% { transform: rotate(-8deg); }
+      50% { transform: rotate(12deg); }
+    }
+    @keyframes rise1 {
+      0% { transform: translate(0, 0) scale(0.6) rotate(0deg); opacity: 0; }
+      25% { opacity: 0.95; }
+      75% { opacity: 0.75; }
+      100% { transform: translate(-35px, -170px) scale(1.25) rotate(-18deg); opacity: 0; }
+    }
+    @keyframes rise2 {
+      0% { transform: translate(0, 0) scale(0.6) rotate(0deg); opacity: 0; }
+      25% { opacity: 0.95; }
+      75% { opacity: 0.75; }
+      100% { transform: translate(40px, -180px) scale(1.3) rotate(20deg); opacity: 0; }
+    }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.15; transform: scale(0.8); }
+      50% { opacity: 0.9; transform: scale(1.3); }
+    }
+    @keyframes pulseBar {
+      0% { transform: scaleY(0.2); }
+      100% { transform: scaleY(1); }
+    }
+  </style>
+
+  <!-- Khung nền bo góc -->
+  <rect width="900" height="420" rx="18" fill="url(#bgGrad)" />
+
+  <!-- Ánh sáng nền mờ ảo -->
+  <circle cx="200" cy="120" r="110" fill="#00f5d4" opacity="0.12" filter="url(#softBlur)" />
+  <circle cx="700" cy="280" r="130" fill="#ff5d8f" opacity="0.12" filter="url(#softBlur)" />
+  <circle cx="450" cy="200" r="90" fill="#ffd166" opacity="0.08" filter="url(#softBlur)" />
+
+  <!-- Các vì sao lấp lánh -->
+  <circle class="star" cx="85" cy="65" r="1.5" style="animation-delay: 0s;" />
+  <circle class="star" cx="180" cy="45" r="2" style="animation-delay: 1.1s;" />
+  <circle class="star" cx="760" cy="70" r="1.8" style="animation-delay: 0.5s;" />
+  <circle class="star" cx="830" cy="140" r="1.5" style="animation-delay: 2.1s;" />
+  <circle class="star" cx="120" cy="260" r="2" style="animation-delay: 1.7s;" />
+  <circle class="star" cx="640" cy="50" r="1.2" style="animation-delay: 2.5s;" />
+
+  <!-- 5 Dây đàn ngân rung mượt mà (Animated Bézier Strings) -->
+  <g fill="none" stroke="url(#stringGrad)" stroke-width="1.6" opacity="0.75">
+    <path>
+      <animate attributeName="d" dur="3.2s" repeatCount="indefinite" values="M 0,210 Q 450,150 900,210;
+                M 0,210 Q 450,270 900,210;
+                M 0,210 Q 450,150 900,210" />
+    </path>
+    <path>
+      <animate attributeName="d" dur="2.6s" repeatCount="indefinite" values="M 0,230 Q 450,285 900,230;
+                M 0,230 Q 450,175 900,230;
+                M 0,230 Q 450,285 900,230" />
+    </path>
+    <path>
+      <animate attributeName="d" dur="3.8s" repeatCount="indefinite" values="M 0,250 Q 450,190 900,250;
+                M 0,250 Q 450,310 900,250;
+                M 0,250 Q 450,190 900,250" />
+    </path>
+    <path>
+      <animate attributeName="d" dur="2.9s" repeatCount="indefinite" values="M 0,270 Q 450,320 900,270;
+                M 0,270 Q 450,220 900,270;
+                M 0,270 Q 450,320 900,270" />
+    </path>
+    <path>
+      <animate attributeName="d" dur="4.2s" repeatCount="indefinite" values="M 0,290 Q 450,240 900,290;
+                M 0,290 Q 450,340 900,290;
+                M 0,290 Q 450,240 900,290" />
+    </path>
+  </g>
+
+  <!-- Các nốt nhạc bay lên từ dây đàn và cây sáo -->
+  <text x="275" y="290" class="note n1">♪</text>
+  <text x="360" y="285" class="note note-cyan n2">♫</text>
+  <text x="455" y="295" class="note note-pink n3">♬</text>
+  <text x="545" y="285" class="note n4">♩</text>
+  <text x="630" y="290" class="note note-cyan n5">♪</text>
+  <text x="395" y="275" class="note note-pink n6">𝄞</text>
+
+  <!-- CÂY SÁO TRÚC (Vẽ bằng Vector + Tua rua đung đưa) -->
+  <g class="flute-group">
+    <!-- Tua rua đỏ treo ở đầu sáo -->
+    <g class="tassel">
+      <path d="M 235,308 Q 232,335 225,355" stroke="#e63946" stroke-width="2.5" fill="none" />
+      <circle cx="233" cy="322" r="4.5" fill="#ffd166" />
+      <path d="M 233,325 L 222,368 L 238,368 Z" fill="#e63946" />
+      <path d="M 233,325 L 228,372 L 243,365 Z" fill="#d62828" opacity="0.85" />
+    </g>
+
+    <!-- Bóng đổ dưới thân sáo -->
+    <rect x="205" y="302" width="490" height="22" rx="11" fill="#000000" opacity="0.35" />
+
+    <!-- Thân sáo trúc -->
+    <rect x="200" y="296" width="490" height="22" rx="11" fill="url(#bambooGrad)" stroke="#704b10" stroke-width="1" />
+
+    <!-- Hai đầu bọc sừng / nẹp đồng -->
+    <rect x="200" y="296" width="16" height="22" rx="6" fill="#3d2b1f" />
+    <rect x="674" y="296" width="16" height="22" rx="6" fill="#3d2b1f" />
+    <line x1="216" y1="296" x2="216" y2="318" stroke="#ffd166" stroke-width="2" />
+    <line x1="674" y1="296" x2="674" y2="318" stroke="#ffd166" stroke-width="2" />
+
+    <!-- Các đốt trúc tự nhiên -->
+    <path d="M 310,295 Q 313,307 310,319" stroke="#6b440b" stroke-width="2.5" fill="none" />
+    <path d="M 465,295 Q 468,307 465,319" stroke="#6b440b" stroke-width="2.5" fill="none" />
+    <path d="M 615,295 Q 618,307 615,319" stroke="#6b440b" stroke-width="2.5" fill="none" />
+
+    <!-- Dây cước quấn trang trí trên thân sáo -->
+    <rect x="250" y="296" width="10" height="22" fill="#9b2226" opacity="0.85" />
+    <rect x="335" y="296" width="8" height="22" fill="#9b2226" opacity="0.85" />
+
+    <!-- Lỗ thổi (Embouchure hole) -->
+    <ellipse cx="280" cy="306" rx="6.5" ry="5" fill="#1b1107" stroke="#f3d078" stroke-width="0.8" />
+
+    <!-- Lỗ dán màng rung (Lỗ màng) -->
+    <ellipse cx="365" cy="306" rx="5.5" ry="4.5" fill="#f9dcc4" stroke="#704b10" stroke-width="1" />
+
+    <!-- 6 Lỗ bấm (Finger holes) phát sáng nhẹ khi nốt nhạc vang lên -->
+    <ellipse cx="425" cy="306" rx="5.5" ry="4.5" fill="#1b1107" />
+    <ellipse cx="458" cy="306" rx="5.5" ry="4.5" fill="#1b1107" />
+    <ellipse cx="491" cy="306" rx="5.5" ry="4.5" fill="#1b1107" />
+    <ellipse cx="532" cy="306" rx="5.5" ry="4.5" fill="#1b1107" />
+    <ellipse cx="565" cy="306" rx="5.5" ry="4.5" fill="#1b1107" />
+    <ellipse cx="598" cy="306" rx="5.5" ry="4.5" fill="#1b1107" />
+
+    <!-- Lỗ định âm & buộc dây -->
+    <circle cx="235" cy="307" r="3" fill="#1b1107" />
+    <circle cx="648" cy="307" r="3.5" fill="#1b1107" />
+  </g>
+
+  <!-- Tên & Dòng giới thiệu -->
+  <text x="450" y="115" text-anchor="middle" class="title">DƯƠNG TIẾN HÀO</text>
+  <text x="450" y="155" text-anchor="middle" class="subtitle">~ Kĩ sư học nhạc, nghệ sĩ học code  ~</text>
+
+  <!-- Sóng nhạc Equalizer nhảy múa ở góc dưới -->
+  <g transform="translate(382, 385)">
+    <rect class="eq-bar" x="0" y="-22" width="5" height="22" rx="2.5" style="animation-delay: 0.1s" />
+    <rect class="eq-bar" x="10" y="-34" width="5" height="34" rx="2.5" style="animation-delay: 0.4s" />
+    <rect class="eq-bar" x="20" y="-18" width="5" height="18" rx="2.5" style="animation-delay: 0.2s" />
+    <rect class="eq-bar" x="30" y="-40" width="5" height="40" rx="2.5" style="animation-delay: 0.6s" />
+    <rect class="eq-bar" x="40" y="-28" width="5" height="28" rx="2.5" style="animation-delay: 0.3s" />
+    <rect class="eq-bar" x="50" y="-46" width="5" height="46" rx="2.5" style="animation-delay: 0.0s" />
+    <rect class="eq-bar" x="60" y="-30" width="5" height="30" rx="2.5" style="animation-delay: 0.5s" />
+    <rect class="eq-bar" x="70" y="-48" width="5" height="48" rx="2.5" style="animation-delay: 0.2s" />
+    <rect class="eq-bar" x="80" y="-26" width="5" height="26" rx="2.5" style="animation-delay: 0.7s" />
+    <rect class="eq-bar" x="90" y="-42" width="5" height="42" rx="2.5" style="animation-delay: 0.1s" />
+    <rect class="eq-bar" x="100" y="-20" width="5" height="20" rx="2.5" style="animation-delay: 0.4s" />
+    <rect class="eq-bar" x="110" y="-36" width="5" height="36" rx="2.5" style="animation-delay: 0.3s" />
+    <rect class="eq-bar" x="120" y="-24" width="5" height="24" rx="2.5" style="animation-delay: 0.6s" />
+    <rect class="eq-bar" x="130" y="-16" width="5" height="16" rx="2.5" style="animation-delay: 0.2s" />
+  </g>
+</svg>
